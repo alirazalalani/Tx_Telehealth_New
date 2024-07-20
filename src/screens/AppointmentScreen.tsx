@@ -13,6 +13,11 @@ import {Colors, Fonts, Images} from '../constants';
 import {horizontalScale, moderateScale, verticalScale} from '../utils/Dim';
 import {Image} from 'react-native';
 import Button from '../components/Button';
+import {
+  responsiveFontSize,
+  responsiveHeight,
+  responsiveWidth,
+} from 'react-native-responsive-dimensions';
 
 interface Service {
   title: string;
@@ -51,8 +56,8 @@ const AppointmentScreen = () => {
 
           <View
             style={{
-              height: 150,
-              width: 250,
+              height: responsiveHeight(18),
+              width: responsiveWidth(70),
               alignSelf: 'center',
             }}>
             <Image
@@ -72,7 +77,7 @@ const AppointmentScreen = () => {
             <Text
               style={{
                 color: Colors.ICON_GRAY,
-                fontSize: moderateScale(18),
+                fontSize: responsiveFontSize(2),
                 marginTop: verticalScale(10),
                 textAlign: 'center',
                 paddingHorizontal: horizontalScale(25),
@@ -84,28 +89,6 @@ const AppointmentScreen = () => {
               </Text>
             </Text>
           </View>
-          {/* <FlatList
-            data={services}
-            keyExtractor={item => item.title}
-            renderItem={({item, index}) => {
-              const colorIndex = index % colors.length; // get the color index based on the current map index
-              const backgroundColor = colors[colorIndex];
-              const isLeftAligned = index % 2 === 0;
-              const alignSelf = isLeftAligned ? 'flex-start' : 'flex-end';
-              return (
-                <View
-                  style={[styles.pointContainer, {backgroundColor, alignSelf}]}>
-                  <Text
-                    style={{
-                      fontSize: verticalScale(20),
-                      color: Colors.DEFAULT_WHITE,
-                    }}>
-                    {item.title}
-                  </Text>
-                </View>
-              );
-            }}
-          /> */}
         </View>
       )}
       {showVIew && (
@@ -120,7 +103,7 @@ const AppointmentScreen = () => {
           {isLoading && (
             <ActivityIndicator
               size={50}
-              style={{backgroundColor: Colors.DEFAULT_WHITE}}
+              style={{backgroundColor: Colors.PRIMARY_COLOR}}
             />
           )}
         </View>

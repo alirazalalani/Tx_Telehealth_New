@@ -2,6 +2,10 @@ import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {moderateScale} from '../utils/Dim';
 import {Fonts, Images} from '../constants';
+import {
+  responsiveHeight,
+  responsiveWidth,
+} from 'react-native-responsive-dimensions';
 
 const Button = ({
   title,
@@ -17,8 +21,8 @@ const Button = ({
       style={[
         {
           backgroundColor: '#007659',
-          paddingVertical: 15,
-          marginTop: 50,
+          paddingVertical: responsiveHeight(1.5),
+          marginTop: responsiveHeight(10),
           borderRadius: 10,
           paddingHorizontal: 20,
           justifyContent: 'center',
@@ -47,7 +51,7 @@ const Button = ({
             justifyContent: 'center',
             borderRadius: 8,
             position: 'absolute',
-            right: 20,
+            right: responsiveWidth(5),
           }}>
           <Image
             source={Images.ARROWRight}

@@ -1,5 +1,7 @@
 export default {
   HOME: require('../assets/images/Home.png'),
+  USER: require('../assets/images/user.png'),
+
   CONTACT: require('../assets/images/contact.png'),
   APPOINTMENT: require('../assets/images/appoint.png'),
   PROFILE: require('../assets/images/profile.jpeg'),

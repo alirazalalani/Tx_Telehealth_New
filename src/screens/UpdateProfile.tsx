@@ -5,6 +5,7 @@ import Heading from '../components/Heading';
 import {horizontalScale, moderateScale, verticalScale} from '../utils/Dim';
 import {Colors, Fonts, Images} from '../constants';
 import {highlights} from '../utils/Constant';
+import {responsiveFontSize} from 'react-native-responsive-dimensions';
 
 const UpdateProfile = () => {
   return (
@@ -16,7 +17,7 @@ const UpdateProfile = () => {
         <Text
           style={{
             color: '#666666',
-            fontSize: moderateScale(18),
+            fontSize: responsiveFontSize(1.8),
             fontFamily: Fonts.POPPINS_REGULAR,
           }}>
           Choose TX Telehealth for exceptional service and personalized care.
@@ -50,7 +51,7 @@ const UpdateProfile = () => {
                 style={{
                   color: '#333333',
                   fontFamily: Fonts.POPPINS_MEDIUM,
-                  fontSize: moderateScale(15),
+                  fontSize: responsiveFontSize(2),
                   marginLeft: horizontalScale(5),
                   width: '98%',
                 }}>

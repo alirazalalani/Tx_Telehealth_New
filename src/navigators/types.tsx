@@ -3,6 +3,7 @@ export type StackNavigatorParamList = {
   //   Login: undefined;
   Bottom: undefined;
   OnBoarding: undefined;
+
   //   OrderConfirmation: undefined;
   //   OrderDetails: undefined;
   //   MapScreen: undefined;
@@ -13,4 +14,5 @@ export type BottomNavigatorParamList = {
   Appointment: undefined;
   Contact: undefined;
   UpdateProfile: undefined;
+  Profile:undefined
 };

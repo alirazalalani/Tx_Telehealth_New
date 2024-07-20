@@ -8,9 +8,13 @@ import {
 } from 'react-native';
 import React from 'react';
 import {Images} from '../constants';
-import {moderateScale} from '../utils/Dim';
+import {horizontalScale, moderateScale, verticalScale} from '../utils/Dim';
 import {useNavigation} from '@react-navigation/native';
 import Button from '../components/Button';
+import {
+  responsiveHeight,
+  responsiveWidth,
+} from 'react-native-responsive-dimensions';
 
 const OnBoarding = () => {
   const navigation: any = useNavigation();
@@ -24,10 +28,9 @@ const OnBoarding = () => {
       <StatusBar backgroundColor={'white'} barStyle={'dark-content'} />
       <View
         style={{
-          height: 150,
-          width: 250,
+          height: responsiveHeight(20),
+          width: responsiveWidth(60),
           alignSelf: 'center',
-          //   backgroundColor: 'red',
         }}>
         <Image
           source={Images.LOGO}
@@ -37,8 +40,8 @@ const OnBoarding = () => {
       </View>
       <View
         style={{
-          width: 470,
-          height: 470,
+          width: responsiveWidth(75),
+          height: responsiveHeight(50),
           alignSelf: 'center',
         }}>
         <Image
