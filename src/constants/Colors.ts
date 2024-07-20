@@ -1,0 +1,7 @@
+export default {
+  PRIMARY_COLOR: '#00354A',
+  SECONDRY_COLOR: '#007659',
+  DEFAULT_WHITE: 'white',
+  DEFAULT_BLACK: '#000000',
+  ICON_GRAY: '#AAAAAA',
+};
