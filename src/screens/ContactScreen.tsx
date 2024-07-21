@@ -48,7 +48,8 @@ const ContactScreen = () => {
             <TouchableOpacity
               activeOpacity={0.8}
               onPress={() => {
-                Linking.openURL(`https://${item.desc}`);
+                // console.log(profile[index]);
+                Linking.openURL(item.url);
               }}
               style={styles.btns}>
               <Image

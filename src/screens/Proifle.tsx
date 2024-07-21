@@ -193,6 +193,7 @@ const Profile = () => {
           /> */}
           <TextInput
             placeholder="Enter your name"
+            placeholderTextColor={Colors.ICON_GRAY}
             value={userData.name}
             onChangeText={name => {
               setUserData(prev => ({
@@ -221,6 +222,7 @@ const Profile = () => {
             style={{marginHorizontal: 12}}
           /> */}
           <TextInput
+            placeholderTextColor={Colors.ICON_GRAY}
             placeholder="Enter your Email"
             value={userData.email}
             onChangeText={email => {

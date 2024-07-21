@@ -20,11 +20,11 @@ const StackNavigator = () => {
           component={SplashScreen}
           options={{headerShown: false}}
         /> */}
-        <Stack.Screen
+        {/* <Stack.Screen
           name="OnBoarding"
           component={OnBoarding}
           options={{headerShown: false}}
-        />
+        /> */}
 
         <Stack.Screen
           name="Bottom"

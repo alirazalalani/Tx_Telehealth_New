@@ -164,18 +164,22 @@ export const profile = [
   {
     desc: 'txtelehealth.com',
     img: Images.GLOBE,
+    url: 'https://www.txtelehealth.com',
   },
   {
     desc: 'info@txtelehealth.com',
     img: Images.EMAIL,
+    url: 'info@txtelehealth.com',
   },
   {
-    desc: '@txtelehalth',
+    desc: '@txtelelehealth',
     img: Images.FB,
+    url: 'https://www.facebook.com/TXTelehealth',
   },
   {
-    desc: '@txtelehalth',
+    desc: '@txtelehealth',
     img: Images.YT,
+    url: 'https://www.youtube.com/@txtelehealth',
   },
 ];
 
