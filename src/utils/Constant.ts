@@ -172,7 +172,7 @@ export const profile = [
     url: 'info@txtelehealth.com',
   },
   {
-    desc: '@txtelelehealth',
+    desc: '@txtelehealth',
     img: Images.FB,
     url: 'https://www.facebook.com/TXTelehealth',
   },
