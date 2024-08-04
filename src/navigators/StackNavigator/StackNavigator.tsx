@@ -15,11 +15,11 @@ const StackNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {/* <Stack.Screen
+        <Stack.Screen
           name="Splash"
           component={SplashScreen}
           options={{headerShown: false}}
-        /> */}
+        />
         {/* <Stack.Screen
           name="OnBoarding"
           component={OnBoarding}

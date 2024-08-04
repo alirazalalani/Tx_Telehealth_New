@@ -4,11 +4,11 @@ import StackNavigator from './src/navigators/StackNavigator/StackNavigator';
 import SplashScreen from 'react-native-splash-screen';
 
 const App = () => {
-  useEffect(() => {
-    setTimeout(() => {
-      SplashScreen.hide();
-    }, 3000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     SplashScreen.hide();
+  //   }, 3000);
+  // }, []);
   return <StackNavigator />;
 };
 

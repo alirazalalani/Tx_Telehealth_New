@@ -8,7 +8,7 @@ const SplashScreen = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      navigation.navigate('OnBoarding');
+      navigation.navigate('Bottom');
     }, 3000);
   }, []);
 
