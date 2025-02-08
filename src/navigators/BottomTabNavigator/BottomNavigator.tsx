@@ -10,7 +10,7 @@ import {
 import {horizontalScale, moderateScale, verticalScale} from '../../utils/Dim';
 import {Colors, Fonts, Images} from '../../constants';
 import {View, Text, StyleSheet, Image} from 'react-native';
-import Profile from '../../screens/Proifle';
+// import Profile from '../../screens/Proifle';
 // import ToggleSwitch from 'toggle-switch-react-native';
 // import TopTabNavigator from '../TopTabNavigator/TopTabNavigator';
 // import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -52,7 +52,7 @@ const BottomNavigator = () => {
             shadowRadius: 0,
             backgroundColor: Colors.PRIMARY_COLOR,
           },
-          tabBarIcon: ({focused}) => {
+          tabBarIcon: ({focused}: any) => {
             return (
               <View
                 style={{
@@ -100,7 +100,7 @@ const BottomNavigator = () => {
             paddingLeft: horizontalScale(5),
           },
 
-          tabBarIcon: ({focused}) => {
+          tabBarIcon: ({focused}: any) => {
             return (
               <View
                 style={{
@@ -136,7 +136,7 @@ const BottomNavigator = () => {
         name="Services"
         component={HomeScreen}
         options={{
-          tabBarIcon: ({focused}) => {
+          tabBarIcon: ({focused}: any) => {
             return (
               <View
                 style={{
@@ -188,7 +188,7 @@ const BottomNavigator = () => {
             paddingLeft: horizontalScale(5),
           },
 
-          tabBarIcon: ({focused}) => {
+          tabBarIcon: ({focused}: any) => {
             return (
               <View
                 style={{
@@ -220,7 +220,7 @@ const BottomNavigator = () => {
           },
         }}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Profile"
         component={Profile}
         options={{
@@ -267,7 +267,7 @@ const BottomNavigator = () => {
             );
           },
         }}
-      />
+      /> */}
     </Tab.Navigator>
   );
 };
