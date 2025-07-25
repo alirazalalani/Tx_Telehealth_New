@@ -1,6 +1,6 @@
 package com.tx_telehealth
 import android.os.Bundle;
-import org.devio.rn.splashscreen.SplashScreen;
+
 
 
 import com.facebook.react.ReactActivity
@@ -11,7 +11,7 @@ import com.facebook.react.defaults.DefaultReactActivityDelegate
 class MainActivity : ReactActivity() {
 
 override  fun onCreate(savedInstanceState: Bundle?) {
-        SplashScreen.show(this);  // here
+        
         super.onCreate(savedInstanceState);
     }
   /**

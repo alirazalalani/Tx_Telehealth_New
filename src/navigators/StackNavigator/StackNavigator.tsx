@@ -5,9 +5,10 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import {StackNavigatorParamList} from '../types';
 import BottomNavigator from '../BottomTabNavigator/BottomNavigator';
+import SplashScreen from '../../screens/SplashScreen';
 
-import {SplashScreen} from '../../screens';
-import OnBoarding from '../../screens/OnBoarding';
+// import {SplashScreen} from '../../screens';
+// import OnBoarding from '../../screens/OnBoarding';
 
 const Stack = createNativeStackNavigator<StackNavigatorParamList>();
 
@@ -15,11 +16,11 @@ const StackNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {/* <Stack.Screen
+        <Stack.Screen
           name="Splash"
           component={SplashScreen}
           options={{headerShown: false}}
-        /> */}
+        />
         {/* <Stack.Screen
           name="OnBoarding"
           component={OnBoarding}
