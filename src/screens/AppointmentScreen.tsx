@@ -18,6 +18,7 @@ import {
   responsiveHeight,
   responsiveWidth,
 } from 'react-native-responsive-dimensions';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 interface Service {
   title: string;
@@ -25,21 +26,23 @@ interface Service {
 const AppointmentScreen = () => {
   const [showVIew, setShowView] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const colors = [Colors.SECONDRY_COLOR, Colors.PRIMARY_COLOR];
-  const services: Service[] = useMemo(
-    () => [
-      {title: 'Same day appointments within minutes of signing up'},
-      {title: 'The doctor calls you at the time you choose'},
-      {title: 'Covered by Insurance or low cost for self-pay($49)'},
-      {
-        title:
-          'Talk to a doctor from your house, work, vehicle, or anywhere that is convenient to you',
-      },
-      {title: 'We treat all ages'},
-      {title: 'All of our doctors live in Texas'},
-    ],
-    [],
-  );
+  const insets = useSafeAreaInsets();
+  // const colors = [Colors.SECONDRY_COLOR, Colors.PRIMARY_COLOR];
+  // const services: Service[] = useMemo(
+  //   () => [
+  //     {title: 'Same day appointments within minutes of signing up'},
+  //     {title: 'The doctor calls you at the time you choose'},
+  //     {title: 'Covered by Insurance or low cost for self-pay($49)'},
+  //     {
+  //       title:
+  //         'Talk to a doctor from your house, work, vehicle, or anywhere that is convenient to you',
+  //     },
+  //     {title: 'We treat all ages'},
+  //     {title: 'All of our doctors live in Texas'},
+  //   ],
+  //   [],
+  // );
+
   const bookNow = useCallback(() => {
     // setIsLoading(true);
 
@@ -51,7 +54,13 @@ const AppointmentScreen = () => {
   return (
     <>
       {!showVIew && (
-        <View style={{flex: 1, backgroundColor: 'white', padding: 10}}>
+        <View
+          style={{
+            flex: 1,
+            backgroundColor: 'white',
+            padding: 10,
+            paddingTop: insets.top,
+          }}>
           <StatusBar backgroundColor={'white'} barStyle={'dark-content'} />
 
           <View
@@ -92,7 +101,11 @@ const AppointmentScreen = () => {
         </View>
       )}
       {showVIew && (
-        <View style={{backgroundColor: Colors.DEFAULT_WHITE}}>
+        <View
+          style={{
+            backgroundColor: Colors.DEFAULT_WHITE,
+            paddingTop: insets.top,
+          }}>
           <TouchableOpacity
             style={styles.DoneButtonStyle}
             onPress={() => {
@@ -111,7 +124,13 @@ const AppointmentScreen = () => {
       {showVIew && (
         <WebView
           androidHardwareAccelerationDisabled={false}
-          source={{uri: 'https://novelhealth.ai/practice/tx-telehealth-415030'}}
+          source={{
+            uri: 'http://app.leaphealth.ai/practice/tx-telehealth-415030',
+          }}
+          onNavigationStateChange={event => {
+            // setIsLoading(event?.loading);
+            console.log(event, 'asdsad');
+          }}
           style={{flex: 1, backgroundColor: Colors.DEFAULT_WHITE}}
         />
       )}
