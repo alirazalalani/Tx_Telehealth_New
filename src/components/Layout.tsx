@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 import {
-  SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
   View,
-} from "react-native";
+  SafeAreaView,
+} from 'react-native';
 
 interface LayoutProps {
   /**
@@ -32,11 +32,11 @@ const Layout: React.FC<LayoutProps> = ({
   Footer = () => {},
   children,
   height = 0,
-  backgroundColor = "white",
+  backgroundColor = 'white',
 }) => {
   return (
     <SafeAreaView style={styles.Container}>
-      <StatusBar barStyle={"dark-content"} backgroundColor={backgroundColor} />
+      <StatusBar barStyle={'dark-content'} backgroundColor={backgroundColor} />
       <View style={styles.layout}>
         {Header}
         <ScrollView
@@ -48,7 +48,7 @@ const Layout: React.FC<LayoutProps> = ({
           {children}
         </ScrollView>
         {Footer}
-        <View style={{ height }} />
+        <View style={{height}} />
       </View>
     </SafeAreaView>
   );
@@ -57,16 +57,16 @@ const Layout: React.FC<LayoutProps> = ({
 const styles = StyleSheet.create({
   Container: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: 'white',
   },
   layout: {
-    width: "100%",
+    width: '100%',
     flex: 1,
   },
   scroll: {
     flex: 1,
-    width: "100%",
-    height: "100%",
+    width: '100%',
+    height: '100%',
   },
 });
 

@@ -10,10 +10,7 @@ import {
 import {horizontalScale, moderateScale, verticalScale} from '../../utils/Dim';
 import {Colors, Fonts, Images} from '../../constants';
 import {View, Text, StyleSheet, Image} from 'react-native';
-// import Profile from '../../screens/Proifle';
-// import ToggleSwitch from 'toggle-switch-react-native';
-// import TopTabNavigator from '../TopTabNavigator/TopTabNavigator';
-// import AsyncStorage from '@react-native-async-storage/async-storage';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 const Tab = createBottomTabNavigator<BottomNavigatorParamList>();
 const BottomNavigator = () => {
@@ -31,7 +28,8 @@ const BottomNavigator = () => {
           },
           shadowOpacity: 0.5,
           shadowRadius: 50,
-          paddingHorizontal: horizontalScale(5),
+          alignItems: 'center',
+          justifyContent: 'center',
         },
       }}>
       <Tab.Screen
@@ -220,54 +218,6 @@ const BottomNavigator = () => {
           },
         }}
       />
-      {/* <Tab.Screen
-        name="Profile"
-        component={Profile}
-        options={{
-          tabBarHideOnKeyboard: true,
-          headerTintColor: 'white',
-
-          headerStyle: {
-            backgroundColor: Colors.PRIMARY_COLOR,
-            elevation: 0,
-          },
-
-          headerTitleStyle: {
-            paddingLeft: horizontalScale(5),
-          },
-
-          tabBarIcon: ({focused}) => {
-            return (
-              <View
-                style={{
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                <Image
-                  source={Images.USER}
-                  resizeMode="contain"
-                  style={{
-                    width: focused ? verticalScale(33) : verticalScale(30),
-                    height: focused ? verticalScale(40) : verticalScale(40),
-                    tintColor: focused
-                      ? Colors.PRIMARY_COLOR
-                      : Colors.ICON_GRAY,
-                  }}
-                />
-                <Text
-                  style={{
-                    color: focused ? Colors.PRIMARY_COLOR : Colors.ICON_GRAY,
-                    fontSize: verticalScale(13),
-                    marginLeft: horizontalScale(3),
-                    fontFamily: Fonts.POPPINS_MEDIUM,
-                  }}>
-                  Profile
-                </Text>
-              </View>
-            );
-          },
-        }}
-      /> */}
     </Tab.Navigator>
   );
 };
@@ -276,9 +226,9 @@ export default BottomNavigator;
 
 const styles = StyleSheet.create({
   header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginRight: horizontalScale(20),
+    // flexDirection: 'row',
+    // justifyContent: 'space-between',
+    // alignItems: 'center',
+    // marginRight: horizontalScale(20),
   },
 });

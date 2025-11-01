@@ -113,25 +113,34 @@ const AppointmentScreen = () => {
             }}>
             <Text style={styles.DoneTextStyle}>Done With The Appointment</Text>
           </TouchableOpacity>
-          {isLoading && (
-            <ActivityIndicator
-              size={50}
-              style={{backgroundColor: Colors.PRIMARY_COLOR}}
-            />
-          )}
+          <View
+            style={{
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            {isLoading && (
+              <ActivityIndicator
+                size={50}
+                style={{backgroundColor: Colors.PRIMARY_COLOR}}
+              />
+            )}
+          </View>
         </View>
       )}
       {showVIew && (
         <WebView
-          androidHardwareAccelerationDisabled={false}
           source={{
-            uri: 'http://app.leaphealth.ai/practice/tx-telehealth-415030',
+            uri: 'https://app.leaphealth.ai/practice/tx-telehealth-415030',
           }}
+          mixedContentMode="always" // allow HTTPS page to load HTTP subresources
+          javaScriptEnabled
+          domStorageEnabled
+          onError={e => console.log('WebView error:', e.nativeEvent)}
+          onHttpError={e => console.log('HTTP error:', e.nativeEvent)}
           onNavigationStateChange={event => {
-            // setIsLoading(event?.loading);
+            setIsLoading(event?.loading);
             console.log(event, 'asdsad');
           }}
-          style={{flex: 1, backgroundColor: Colors.DEFAULT_WHITE}}
         />
       )}
     </>
